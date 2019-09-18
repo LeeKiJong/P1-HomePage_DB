@@ -1,0 +1,78 @@
+<!DOCTYPE html> 
+<html> 
+	<head>
+	<title>Battle Ground Map</title>
+		<meta charset="UTF-8"/>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style> 
+			#press7{ 
+				display:block; 
+				border : 2px solid;
+				text-align : center;
+			}  
+			#press8{ 
+				display:none; 
+				border : 2px solid ;
+				text-align : center;
+			}  
+			#press9{ 
+				display:block; 
+				border : 2px solid;
+				text-align : center;
+			}  
+			#press10{ 
+				display:none; 
+				border : 2px solid;
+				text-align : center;
+			}  		
+			#image7{  
+				display:none; 
+			}	 
+			#image8{  
+				display:none; 
+			}			
+		</style> 
+	</head> 
+	<body> 
+	&nbsp;
+	<div id="press7">누르면 에란겔 맵 팁이 나옵니다.</div> &nbsp;
+	<div id="press8">누르면 에란겔 맵 팁이 들어갑니다.</div> &nbsp;
+	<div id="image7"><img src="images/emap.jpg" width="560" height="500"></div> 
+	&nbsp;
+	<div id="press9">누르면 미라마 맵 팁이 나옵니다.</div> &nbsp;
+	<div id="press10">누르면 미라마 맵 팁이 들어갑니다.</div> &nbsp;
+	<div id="image8"><img src="images/mmap.jpg" width="560" height="500"></div> 
+	&nbsp;
+	
+	<script>  
+		$(document).ready(function() {   
+			$("#press7").click(function() { 
+				$("#press7").hide();  
+				$("#press8").show(); 
+				$("#image7").fadeIn(1000);					
+ 
+			}); 
+			$("#press8").click(function(){
+				$("#press7").show();
+				$("#press8").hide();  
+				$("#image7").fadeOut(1000);
+			});
+			$("#press9").click(function() { 
+				$("#press9").hide();  
+				$("#press10").show(); 
+				$("#image8").fadeIn(1000);	
+				 				
+ 
+			}); 
+			$("#press10").click(function(){
+				$("#press9").show();
+				$("#press10").hide();  
+				$("#image8").fadeOut(1000);
+			});
+		}); 
+	</script>
+</body>
+</html>

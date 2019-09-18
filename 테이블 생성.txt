@@ -1,0 +1,143 @@
+create database Board34 DEFAULT CHARACTER SET utf8 collate utf8_general_ci; 
+ use Board34;
+ set names utf8; 
+
+create table user (
+	ID varchar(100) not null,
+	password varchar(100) not null,
+	nickname varchar(100) not null
+     );
+
+ create table board_free (
+     b_no int unsigned not null primary key auto_increment,
+     b_title varchar(100) not null,
+     b_content text not null,
+     b_date datetime not null,
+     b_hit int unsigned not null default 0,
+     b_id varchar(100) not null
+     );
+
+create table comment_free(
+     co_no int unsigned not null primary key auto_increment,
+     b_no int unsigned not null,
+     co_order int unsigned default 0,
+     co_content text not null,
+     co_id varchar(100) not null  
+     );
+
+create table Srweapon_info (  
+     name varchar(50),
+     image mediumblob,
+     charging_number varchar(20),
+     use_ammo varchar(20),
+     shoot_mode varchar(20),
+     appear_map varchar(30)
+) 
+
+
+
+ENGINE=InnoDB default character set utf8 collate utf8_general_ci; 
+ 
+ set names euckr; 
+ insert into Srweapon_info values ("AWM", "images/awm.jpg", "5(7)", ".300매그넘", "단발",
+				 "보급 상자"); 
+	
+ insert into Srweapon_info values ("M24", "images/m24.jpg","5(7)", "7.62mm", "단발",
+				 "보급 상자"); 
+	
+ insert into Srweapon_info values ("Kar98k", "images/kar98.jpg","5(7)", "7.62mm", "단발",
+				 "에란겔, 미라마");
+ 
+	
+ insert into Srweapon_info values ("Win94", "images/win.jpg","8", ".45 ACP", "단발",
+				 "미라마"); 
+	
+ insert into Srweapon_info values ("Mini14", "images/mini.jpg","20(30)", ".5.56mm", "단발",
+				 "에란겔, 미라마"); 
+	
+insert into Srweapon_info values ("Mk14", "images/mk14.jpg","10(20)", ".7.62mm", "단발, 연사",
+				 "보급 상자"); 
+
+insert into Srweapon_info values ("SKS", "images/sks.jpg","10(20)", ".5.56mm", "단발",
+				 "에란겔, 미라마"); 
+
+insert into Srweapon_info values ("VSS", "images/vss.jpg","10(20)", ".9mm", "단발, 연사",
+				 "에란겔, 미라마"); 
+
+create table Arweapon_info (  
+     name varchar(50),
+     image mediumblob,
+     charging_number varchar(20),
+     use_ammo varchar(20),
+     shoot_mode varchar(20),
+     appear_map varchar(30)
+) 
+
+
+
+ENGINE=InnoDB default character set utf8 collate utf8_general_ci; 
+ 
+ set names euckr; 
+ insert into Arweapon_info values ("M16A4  ", "images/m162.jpg", "30(40)", "5.56mm", "단발,3점사",
+				 "에란겔, 미라마"); 
+
+insert into Arweapon_info values ("AUG", "images/aug.jpg","30(40)", "5.56mm", "단발, 연사",
+				 "보급 상자");
+	
+insert into Arweapon_info values ("M416", "images/m4.jpg","30(40)", "5.56mm", "단발, 연사",
+				 "에란겔, 미라마");
+
+insert into Arweapon_info values ("SCAR-L", "images/scar.jpg","30(40)", "5.56mm", "단발, 연사",
+				 "에란겔, 미라마");
+	
+insert into Arweapon_info values ("AKM", "images/akm.jpg","30(40)", "7.62mm", "단발, 연사",
+				 "에란겔, 미라마");
+	
+insert into Arweapon_info values ("Groza", "images/groza.jpg","30(40)", "7.62mm", "단발, 연사",
+				 "보급 상자");
+
+create table word (  
+     name varchar(50),
+     info varchar(150),
+     type varchar(50)
+) 
+ENGINE=InnoDB default character set utf8 collate utf8_general_ci; 
+ 
+ set names euckr; 
+
+insert into word values ("2배", "2배율 스코프", "총기 부착물"); 
+insert into word values ("대탄/대용량", "대용량 탄창", "총기 부착물"); 
+insert into word values ("퀵드", "퀵드로우 탄창", "총기 부착물"); 
+insert into word values ("대퀵", "대용량 퀵 드로우 탄창", "총기 부착물"); 
+insert into word values ("수직/수손", "수직 손잡이", "총기 부착물"); 
+insert into word values ("앵글/앵손", "앵글 손잡이", "총기 부착물"); 
+insert into word values ("레닷/레돗", "데드 도트 사이트", "총기 부착물"); 
+insert into word values ("홀로그램", "홀로그램 조준기", "총기 부착물"); 
+insert into word values ("구상/식빵", "구급 상자", "회복 아이템"); 
+insert into word values ("드링크", "에너지 드링크", "회복 아이템"); 
+insert into word values ("키트/의료킷", "의료용 키트", "회복 아이템"); 
+insert into word values ("뚝배기/뚝", "헬맷", "방어구"); 
+insert into word values ("조끼/갑빠", "방탄 조끼", "방어구"); 
+insert into word values ("길리", "길리 슈트", "방어구"); 
+insert into word values ("이토바이/적토마", "오토바이", "차량");
+insert into word values ("삼토바이", "바퀴3개 오토바이", "차량"); 
+insert into word values ("유에지/레토나/지프", "UAZ", "차량"); 
+insert into word values ("버스/잉잉이", "미니 버스", "차량"); 
+insert into word values ("트럭", "픽업 트럭", "차량"); 
+insert into word values ("다시아", "다시아 1300", "차량"); 
+insert into word values ("아쿠아 레일", "아쿠아 레일", "차량"); 
+insert into word values ("보트", "보트 pg-117", "차량"); 
+insert into word values ("버기", "버기카", "차량");  
+insert into word values ("고라니/노루", "도로에 뛰어다니는 플레이어", "기타"); 
+insert into word values ("검문소", "다리 지역에서 기다렸다가 지나가는 차량들을 공격", "기타"); 
+insert into word values ("부동산", "자기장이 줄어들 곳을 예측하는 플레이 방법", "기타"); 
+insert into word values ("고인물", "게임을 오래한 유저들을 말함", "기타"); 
+insert into word values ("양각", "양쪽에서 압박하는 포지션", "기타"); 
+insert into word values ("오버파밍", "자기장을 맞으면서 파밍하는 행위", "기타"); 
+insert into word values ("존버", "'존나 버티기'의 준말, 건물에서 대기하는 전략", "기타"); 
+insert into word values ("도핑", "에너지 드링크, 진통제로 스테미너 60%이상을 채우는 행위", "기타"); 
+insert into word values ("치코리타", "풀숲에 은신하는 유저", "기타"); 
+insert into word values ("레드존", "랜덤으로 폭격이 발생하는 지역", "기타"); 
+insert into word values ("솔쿼드", "혼자 4인파티를 하는 행위", "기타"); 
+
+

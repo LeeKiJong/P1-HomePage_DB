@@ -1,0 +1,111 @@
+<!DOCTYPE html> 
+<html> 
+	<head>
+	<title>Battle Ground Control</title>
+		<meta charset="UTF-8"/>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> 
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>  
+			#press11{ 
+				display:block; 
+				border : 2px solid;
+				text-align : center;
+			}  
+			#press21{ 
+				display:none; 
+				border : 2px solid ;
+				text-align : center;
+			}  
+			#press3{ 
+				display:block; 
+				border : 2px solid;
+				text-align : center;
+			}  
+			#press4{ 
+				display:none; 
+				border : 2px solid;
+				text-align : center;
+			}  
+			#press5{ 
+				display:block; 
+				border : 2px solid;
+				text-align : center;
+			}  
+			#press6{ 
+				display:none; 
+				border : 2px solid;
+				text-align : center;
+			}  
+			#image1{  
+				display:none; 
+			}	 
+			#image2{  
+				display:none; 
+			}	
+			#image3{  
+				display:none; 
+			}	 
+			#image4{  
+				display:none; 
+			}				
+		</style> 
+	</head> 
+	<body> 
+	&nbsp;
+	<div id="press11">누르면 기본 조작키가 나옵니다.</div> &nbsp;
+	<div id="press21">누르면 기본 조작키가 들어갑니다.</div> &nbsp;
+	<div id="image1"><img src="images/keyboard1.jpg" width="560" height="500"></div> 
+	<div id="image2"><img src="images/keyboard_info.jpg" width="560" height="500"></div> 
+	&nbsp;
+	<div id="press3">누르면 운전 조작키가 나옵니다.</div> &nbsp;
+	<div id="press4">누르면 운전 조작키가 들어갑니다.</div> &nbsp;
+	<div id="image3"><img src="images/DriveKey.jpg" width="560" height="500"></div> 
+	&nbsp;
+	<div id="press5">누르면 기타 조작키가 나옵니다.</div> &nbsp;
+	<div id="press6">누르면 기타 조작키가 들어갑니다.</div> &nbsp;
+	<div id="image4"><img src="images/etc.jpg" width="560" height="500"></div>  
+	&nbsp;
+	<script>  
+		$(document).ready(function() {   
+			$("#press11").click(function() { 
+				$("#press11").hide();  
+				$("#press21").show(); 
+				$("#image1").fadeIn(1000);	
+				$("#image2").fadeIn(1000); 				
+ 
+			}); 
+			$("#press21").click(function(){
+				$("#press11").show();
+				$("#press21").hide();  
+				$("#image1").fadeOut(1000);
+				$("#image2").fadeOut(1000);  
+			});
+			$("#press3").click(function() { 
+				$("#press3").hide();  
+				$("#press4").show(); 
+				$("#image3").fadeIn(1000);	
+				 				
+ 
+			}); 
+			$("#press4").click(function(){
+				$("#press3").show();
+				$("#press4").hide();  
+				$("#image3").fadeOut(1000);
+			});
+			$("#press5").click(function() { 
+				$("#press5").hide();  
+				$("#press6").show(); 
+				$("#image4").fadeIn(1000);				
+ 
+			}); 
+			$("#press6").click(function(){
+				$("#press5").show();
+				$("#press6").hide();  
+				$("#image4").fadeOut(1000);
+			});
+		}); 
+	</script>
+</body>
+</html>

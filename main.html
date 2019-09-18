@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Battle Ground Community</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<span class="icon fa-diamond"></span>
+						</div>
+						<div class="content">
+							<div class="inner">
+							
+								<h1>Battle Ground Community</h1>
+								<?php if($_COOKIE['loginok']==1) {?>
+								<p><?php echo $_COOKIE['nickname']; ?>님 반갑습니다. 로그아웃을 하실려면 <a href="./logout.php">logout</a>, 
+								정보 수정을 하실려면 <a href="./change.php">정보 수정</a>, 회원 탈퇴를 하실려면 <a href="./leave_check.php">회원 탈퇴</a>, 
+								자유게시판을 이용하려면 <a href="./index.php">자유게시판</a>을 누르세요.</p>
+								<?php } if($_COOKIE['loginok']!=1){ ?>
+								
+								<article id="contact">
+									<h2 class="major">Login</h2>
+										<form method="post" action="./login_check.php">
+											<div class="field half first">
+												<label for="ID">ID</label>
+												<input type="text" name="ID" id="ID" />
+											</div>
+											<div class="field half">
+												<label for="password">Password</label>
+												<input type="password" name="password" id="password" />
+											</div>
+											<div class="btnSet">
+												<button type="submit" class="btnSubmit btn">
+													<?php echo 'Login'?>
+												</button>
+											</div>
+										</form>
+										<form action="./register.php" method="post">
+											<div class="btnSet">
+												<button type="submit" class="btnSubmit btn">
+													<?php echo 'Sign Up'?>
+												</button>
+											</div>
+										</form>
+								</article>
+								<?php } ?>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="#control">Control</a></li>
+								<li><a href="#weapon">Weapon</a></li>
+								<li><a href="#map">Map</a></li>
+								<li><a href="#word">Word</a></li>
+								<!--<li><a href="#elements">Elements</a></li>-->
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+	
+							<article id="control">
+								<h2 class="major">Control Guide</h2>
+								<span class="image main"><img src="images/keyboard.jpg" width="560" height="400" /></span>
+								<?php require_once("keyboard.html"); ?>
+							</article>
+
+							<article id="weapon">
+								<h2 class="major">Weapon Info</h2>
+								<span class="image main"><img src="images/weapon.jpg" width="560" height="400" /></span>
+								<?php require_once("weapon.php"); ?>
+							</article>
+
+							<article id="map">
+								<h2 class="major">Map Info</h2>
+								<span class="image main"><img src="images/map.jpg" width="560" height="400" /></span>
+								<?php require_once("map.html"); ?>
+							</article>
+							
+							<article id="word">
+								<h2 class="major">Word Book</h2>
+								<span class="image main"><img src="images/word.jpg" width="560" height="400" /></span>
+								<?php require_once("word.php"); ?>
+							</article>
+							
+
+		
+	
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
