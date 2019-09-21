@@ -1,13 +1,14 @@
 # HomePage_DB
 ## Table of contents
 * Quick start
+* Operation process
 * Error solution
 ## Quick start
-* Several quick start options are available:
-Download the latest release.
-** [Install with APM Setup](https://kldp.net/apmsetup/release/)
-** Windows Security Warning: Allow access
-** Confirm Installation: [localhost](localhost)localhost OR [http://127.0.0.1](http://127.0.0.1)
+* Several quick start options are available
+* Download the latest release.
+  * [Install with APM Setup](https://kldp.net/apmsetup/release/)
+  * Windows Security Warning: Allow access
+  * Confirm Installation: [localhost](localhost)localhost OR [http://127.0.0.1](http://127.0.0.1)
 ## Operation process
 1. Clone the repo: `git clone https://github.com/LeeKiJong/HomePage_DB.git` 
 2. Insert SQL Table Data
