@@ -1,7 +1,7 @@
 # HomePage_DB
-## Table of contents
-..* Quick start
-..* Error solution
+Table of contents
+* Quick start
+* Error solution
 ##Quick start
 ..* Several quick start options are available:
 ..* ..* Download the latest release.
