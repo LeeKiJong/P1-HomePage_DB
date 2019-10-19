@@ -14,7 +14,7 @@
   * Windows Security Warning(윈도우 보안 경고): Allow access
   * Confirm Installation(설치 확인): [localhost](localhost) OR [http://127.0.0.1](http://127.0.0.1)
 ## 포함 목록
-다운로드 목록에는 다음과 같은 디렉토리와 파일이 있으며 공통 에셋을 논리적으로 그룹화하고 유사 및 축소 변형을 모두 제공합니다. 
+다운로드 목록에는 다음과 같은 디렉토리와 파일이 있으며 공통 에셋을 논리적으로 그룹화하고 유사 및 축소 변형을 모두 제공합니다.  
 볼 수 있는 목록:
 
 * HomePage_DB/
