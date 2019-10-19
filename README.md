@@ -56,6 +56,19 @@
       * ...   
    * 실행화면.mp4  
    * 테이블 생성.txt  
+   * Display
+      * Board
+      * Board_AfterWrite
+      * Board_Write
+      * Control_Guide
+      * Map_Image
+      * SignUp
+      * Start_Login
+      * Start_logout
+      * UserInfo_Delete
+      * UserInfo_Update
+      * Weapon_Info
+      * Word_Info
 
 ## 동작 과정
 1. Clone the repo: `git clone https://github.com/LeeKiJong/HomePage_DB.git` 
